@@ -46,6 +46,8 @@ static UIVisualEffectView *barView;
       NSString *somestring = alertController.textFields[0].text;
       [self setupWebView:somestring];
     }]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+    }]];
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
   } else {
     [memeView removeFromSuperview];
